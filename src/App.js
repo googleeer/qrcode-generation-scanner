@@ -38,6 +38,10 @@ function App() {
   const onScanFile = () => {
     qrRef.current.openImageDialog();
   };
+  const onTurnOffCam = () => {
+    // qrRef.current.openImageDialog();
+    console.log("Camera if off");
+  };
   const handleErrorWebCam = (error) => {
     console.log(error);
   };
@@ -54,7 +58,7 @@ function App() {
         </h2>
         <CardContent>
           <Grid container spacing={2}>
-            <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
+            {/* <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
               <TextField
                 label="Enter Text Here"
                 onChange={(e) => setText(e.target.value)}
@@ -94,7 +98,7 @@ function App() {
                 legacyMode
               />
               <h3>Scanned Code: {scanResultFile}</h3>
-            </Grid>
+            </Grid> */}
             <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
               <h3>Qr Code Scan by Web Cam</h3>
               <QrReader
@@ -104,6 +108,15 @@ function App() {
                 onScan={handleScanWebCam}
               />
               <h3>Scanned By WebCam Code: {scanResultWebCam}</h3>
+              <Button
+                disabled={scanResultWebCam ? false : true}
+                className={classes.btn}
+                variant="contained"
+                color="secondary"
+                href={scanResultWebCam}
+              >
+                Scan QR For Mint
+              </Button>
             </Grid>
           </Grid>
         </CardContent>
