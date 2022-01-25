@@ -58,47 +58,7 @@ function App() {
         </h2>
         <CardContent>
           <Grid container spacing={2}>
-            {/* <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
-              <TextField
-                label="Enter Text Here"
-                onChange={(e) => setText(e.target.value)}
-              />
-              <Button
-                className={classes.btn}
-                variant="contained"
-                color="primary"
-                onClick={() => generateQrCode()}
-              >
-                Generate
-              </Button>
-              <br />
-              <br />
-              <br />
-              {imageUrl ? (
-                <a href={imageUrl} download>
-                  <img src={imageUrl} alt="img" />
-                </a>
-              ) : null}
-            </Grid>
-            <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
-              <Button
-                className={classes.btn}
-                variant="contained"
-                color="secondary"
-                onClick={onScanFile}
-              >
-                Scan Qr Code
-              </Button>
-              <QrReader
-                ref={qrRef}
-                delay={300}
-                style={{ width: "100%" }}
-                onError={handleErrorFile}
-                onScan={handleScanFile}
-                legacyMode
-              />
-              <h3>Scanned Code: {scanResultFile}</h3>
-            </Grid> */}
+            /{" "}
             <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
               <h3>Qr Code Scan by Web Cam</h3>
               <QrReader
